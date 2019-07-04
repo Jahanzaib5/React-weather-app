@@ -1,3 +1,8 @@
+<h1>This is a react based application to check the weather</h1>
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
