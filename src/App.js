@@ -3,6 +3,7 @@ import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 import { async } from "q";
+import './App.css';
 
 const API_KEY = "0e26025171b1ce5cc2800abf0bad7c07";
 
