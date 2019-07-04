@@ -3,7 +3,7 @@ import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 import { async } from "q";
-import './App.css';
+import "./App.css";
 
 const API_KEY = "0e26025171b1ce5cc2800abf0bad7c07";
 
@@ -38,30 +38,44 @@ export default class App extends Component {
         description: data.weather[0].description,
         error: ""
       });
-    }else{
+    } else {
       this.setState({
         temperature: undefined,
-        city:undefined,
+        city: undefined,
         country: undefined,
         humidity: undefined,
         description: undefined,
         error: "Please enter the values!"
-      })
+      });
     }
   };
   render() {
     return (
       <div>
-        <Titles />
-        <Form getWeather={this.getWeather} />
-        <Weather
-          temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-        />
+        <div>
+          <div className="wrapper">
+            <div className="main">
+              <div className="container">
+                <div className="row">
+                  <div className="col-xs-5 title-container">
+                    <Titles />
+                  </div>
+                  <div className="col-xs-7 form-container">
+                    <Form getWeather={this.getWeather} />
+                    <Weather
+                      temperature={this.state.temperature}
+                      city={this.state.city}
+                      country={this.state.country}
+                      humidity={this.state.humidity}
+                      description={this.state.description}
+                      error={this.state.error}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
