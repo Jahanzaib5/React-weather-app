@@ -10,7 +10,7 @@ export default class Weather extends Component {
                     </p>
                 }
                 {
-                    this.props.temperature && <p className='weather__key'>Temperature: 
+                    this.props.temperature && <p className='weather__key'>Temperature('C): 
                         <span className='weather__value'> {this.props.temperature}</span>
                     </p>
                 }

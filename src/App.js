@@ -72,6 +72,7 @@ export default class App extends Component {
                     />
                   </div>
                 </div>
+                <p className="para">Copyright &copy; 2019 JZ</p>
               </div>
             </div>
           </div>
